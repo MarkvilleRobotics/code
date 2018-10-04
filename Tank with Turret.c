@@ -12,11 +12,11 @@ task main()
 		motor[left2] = vexRT[Ch3];
 		motor[right1] = vexRT[Ch2];
 		motor[right2] = vexRT[Ch2];
-		if (vexRT[Btn6U]==1)
+		if (vexRT[Btn6U]==1 && vexRT[Btn5U]==0)
 		{
 			motor[rotate] = -32;
 		}
-		else if (vexRT[Btn5U]==1)
+		else if (vexRT[Btn5U]==1 && vexRT[Btn6U]==0)
 		{
 			motor[rotate] = 32;
 		}
