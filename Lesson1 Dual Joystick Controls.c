@@ -6,7 +6,7 @@
 
 task main()//This is a program designed to run a basic car with 4 wheels.
 {
-	while(true){//This makes it so that the robot is constantly keeping the motor's speed updated.
+	for(;;){//This makes it so that the robot is constantly keeping the motor's speed updated.
 		motor[left1] = vexRT[Ch3];//This sets the first left motor to run at whatever speed the left joystick sets it to.
 		motor[left2] = vexRT[Ch3];//Same as above but for the second motor
 		motor[right1] = vexRT[Ch2];//Same as above, but for the opposite side. As we have already declared that this is a reversed motor, we can treat it the same as the other motors.
