@@ -82,7 +82,7 @@ void operatorControl() {
 //UNFINISHED BELOW
 void wallslam(){
 	for(;;){
-		if (SensorValue[dgtl1] == 0 && SensorValue[dgtl2] == 0){
+		if (digitalRead(BUMPER_1) == LOW && digitalRead(BUMPER_2) == LOW){
 		motor[motorl] = 50;
 		motor[motorr] = -50;
 		delay (50);
@@ -108,14 +108,14 @@ void findline(bool side, int ls, int rs){
 	if (side) {
 		if (rs>=2450){
 			for(;;){
-				trackline(SensorValue[in1]-200, SensorValue[in3]);
+				trackline(analogReadCalibrated(LINE_TRACKER_PORT_L)-200, analogReadCalibrated(LINE_TRACKER_PORT_R));
 			}
 		}
 	}
 	if (!side) {
 		if (ls>=2450){
 			for(;;){
-				trackline(SensorValue[in1]-200, SensorValue[in3]);
+				trackline(analogReadCalibrated(LINE_TRACKER_PORT_L)-200, analogReadCalibrated(LINE_TRACKER_PORT_R));
 			}
 		}
 	}
