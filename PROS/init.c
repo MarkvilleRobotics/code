@@ -18,14 +18,6 @@
  * configure a UART port (usartOpen()) but cannot set up an LCD (lcdInit()).
  */
 void initializeIO() {
-  analogCalibrate(LINE_TRACKER_PORT_L);
-  analogCalibrate(LINE_TRACKER_PORT_C);
-  analogCalibrate(LINE_TRACKER_PORT_R);
-  analogCalibrate(LIGHT_TRACKER_PORT_R);
-  analogCalibrate(LIGHT_TRACKER_PORT_B);
-  analogCalibrate(LIGHT_TRACKER_PORT_Y);
-  sonarl = ultrasonicInit(6,5);
-  sonarr = ultrasonicInit(8,7);
   pinMode(BUMPER_1, 1);
   pinMode(BUMPER_2, 2);
 }
@@ -44,5 +36,12 @@ void initializeIO() {
  * can be implemented in this task if desired.
  */
 void initialize() {
-
+  analogCalibrate(LINE_TRACKER_PORT_L);
+  analogCalibrate(LINE_TRACKER_PORT_C);
+  analogCalibrate(LINE_TRACKER_PORT_R);
+  analogCalibrate(LIGHT_TRACKER_PORT_R);
+  analogCalibrate(LIGHT_TRACKER_PORT_B);
+  analogCalibrate(LIGHT_TRACKER_PORT_Y);
+  sonarl = ultrasonicInit(6,5);
+  sonarr = ultrasonicInit(8,7);
 }
