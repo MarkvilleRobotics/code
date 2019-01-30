@@ -32,7 +32,7 @@ extern "C" {
 #endif
 
 // 7-bit address of the slave I2C device, right aligned
-#define I2C_SLAVE_ADDR       0x68
+//#define I2C_SLAVE_ADDR       0x68
 // Fictional 32-bit data buffer for the device, 0x30-0x34
 //#define I2C_SLAVE_BUF_DATA   0x30
 
