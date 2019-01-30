@@ -31,6 +31,15 @@
 extern "C" {
 #endif
 
+// 7-bit address of the slave I2C device, right aligned
+#define I2C_SLAVE_ADDR       0x68
+// Fictional 32-bit data buffer for the device, 0x30-0x34
+//#define I2C_SLAVE_BUF_DATA   0x30
+
+// Fictional "enable" register for the device
+//#define I2C_SLAVE_REG_ENABLE   0x38
+// Fictional 32-bit "parameters" buffer for the device, 0x6D-0x6F
+//#define I2C_SLAVE_BUF_PARAMS   0x6D
 
 // A function prototype looks exactly like its declaration, but with a semicolon instead of
 // actual code. If a function does not match a prototype, compile errors will occur.
